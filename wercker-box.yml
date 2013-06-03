@@ -1,13 +1,42 @@
 name: python
-version: 0.0.6
-inherits: wercker/ubuntu12.04-chef10.18.2@0.0.8
-type : service
+version: 0.0.4
+inherits: wercker/ubuntu12.04-webessentials@0.0.3
+type : main
 platform : ubuntu@12.04
-description : mongodb
+description : python
 keywords:
-  - mongodb
+  - python
 packages :
-  - mongodb
+  - python
 script : sudo chef-solo -c $WERCKER_SOURCE_DIR/solo.rb -j $WERCKER_SOURCE_DIR/solo.json -l debug
-env:
-  WERCKER_MONGODB_PORT: 27017
+
+box-detect:
+  priority : 900
+  version : 
+  detect:
+    - files:
+      - requirements.txt
+    - files:
+      - setup.py
+      
+default-build:
+  python:
+    priority : 50
+    detect:
+      - default: true
+    text-to-append: |
+      # Build definition
+      build:
+        # The steps that will be executed on build
+        steps:
+          # A step that executes `pip install` command
+          - pip-install 
+          
+          # A custom script step, name value is used in the UI
+          # and the code value contains the command that get executed
+          - script:
+              name: echo python information
+              code: |
+                echo "python version $(python --version) running"
+                echo "pip version $(pip --version) running"
+          
