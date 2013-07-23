@@ -1,5 +1,5 @@
 name: python
-version: 0.0.4
+version: 0.0.5
 inherits: wercker/ubuntu12.04-webessentials@0.0.3
 type : main
 platform : ubuntu@12.04
@@ -12,13 +12,13 @@ script : sudo chef-solo -c $WERCKER_SOURCE_DIR/solo.rb -j $WERCKER_SOURCE_DIR/so
 
 box-detect:
   priority : 900
-  version : 
+  version :
   detect:
     - files:
       - requirements.txt
     - files:
       - setup.py
-      
+
 default-build:
   python:
     priority : 50
@@ -30,8 +30,8 @@ default-build:
         # The steps that will be executed on build
         steps:
           # A step that executes `pip install` command
-          - pip-install 
-          
+          - pip-install
+
           # A custom script step, name value is used in the UI
           # and the code value contains the command that get executed
           - script:
@@ -39,4 +39,4 @@ default-build:
               code: |
                 echo "python version $(python --version) running"
                 echo "pip version $(pip --version) running"
-          
+
