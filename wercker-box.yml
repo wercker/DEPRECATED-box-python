@@ -1,6 +1,6 @@
 name: python
-version: 0.0.5
-inherits: wercker/ubuntu12.04-webessentials@0.0.3
+version: 0.0.6
+inherits: wercker/ubuntu12.04-webessentials@0.0.6
 type : main
 platform : ubuntu@12.04
 description : python
