@@ -4,7 +4,7 @@ A [wercker box](http://devcenter.wercker.com/articles/boxes/) with python 2.7
 and 3.2 installed. For both versions of python setuptools, wheel, pip and
 virtualenv are installed.
 
-There are two steps by default added to the wercker.yaml:
+There are two steps by default added to the wercker.yml:
 
 - `virtualenv` which sets up a python
 [virtual environment](http://www.virtualenv.org/en/latest/). Which is common
@@ -24,7 +24,7 @@ every now and then.
 
 ## Usage
 
-The following is the default [wercker.yaml](http://devcenter.wercker.com/articles/werckeryml/) for python:
+The following is the default [wercker.yml](http://devcenter.wercker.com/articles/werckeryml/) for python:
 
 ```yaml
 
@@ -93,6 +93,8 @@ IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
 CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 # Changelog
+## 0.0.10
+- switch for default pip (python 2.7 one or 3.2)
 
 ## 0.0.9
 - Python 3.2 added by default

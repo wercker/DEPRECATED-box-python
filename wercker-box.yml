@@ -1,5 +1,5 @@
 name: python
-version: 0.0.9
+version: 0.0.10
 inherits: wercker/ubuntu12.04-webessentials@0.0.12
 type : main
 platform : ubuntu@12.04
@@ -25,8 +25,8 @@ script : |
   sudo python2 ez_setup.py
 
   wget https://raw.github.com/pypa/pip/master/contrib/get-pip.py
-  sudo python3 get-pip.py
   sudo python get-pip.py
+  sudo python3 get-pip.py
 
   sudo pip-3.2 install virtualenv wheel
   sudo pip-2.7 install virtualenv wheel
