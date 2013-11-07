@@ -1,5 +1,5 @@
 name: python
-version: 0.0.9-dev
+version: 0.0.9
 inherits: wercker/ubuntu12.04-webessentials@0.0.12
 type : main
 platform : ubuntu@12.04
