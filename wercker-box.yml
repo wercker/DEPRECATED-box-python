@@ -24,14 +24,14 @@ script : |
   sudo python3 ez_setup.py
   sudo python2 ez_setup.py
 
-  wget https://raw.github.com/pypa/pip/master/contrib/get-pip.py
+  wget https://raw2.github.com/pypa/pip/1.4.X/contrib/get-pip.py
   sudo python get-pip.py
   sudo python3 get-pip.py
   sudo rm -rf /usr/local/bin/pip
-  sudo cp /usr/local/bin/pip2.7 /usr/local/bin/pip
+  sudo cp /usr/local/bin/pip-2.7 /usr/local/bin/pip
 
-  sudo pip3.2 install virtualenv wheel
-  sudo pip2.7 install virtualenv wheel
+  sudo pip-3.2 install virtualenv wheel
+  sudo pip-2.7 install virtualenv wheel
 
   sudo chef-solo -c $WERCKER_SOURCE_DIR/solo.rb -j $WERCKER_SOURCE_DIR/solo.json -l debug
 
