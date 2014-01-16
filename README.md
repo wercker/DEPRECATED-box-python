@@ -64,10 +64,7 @@ see our [devcenter](http://devcenter.wercker.com). We also have guides:
 
 # What's new
 
-- Python 3.2 added
-- pip updated to 1.4.1
-- setuptools updated
-- wheels installed
+- Changed `ubuntu12.04-webessentials` to version `1.0.0`
 
 # License
 
@@ -93,13 +90,21 @@ IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
 CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 # Changelog
+
+## 0.0.12
+
+- Changed `ubuntu12.04-webessentials` to version `1.0.0`
+
 ## 0.0.11
+
 - force pip for python 2.7 to be deafult
 
 ## 0.0.10
+
 - switch for default pip (python 2.7 one or 3.2)
 
 ## 0.0.9
+
 - Python 3.2 added by default
 - pip updated to 1.4.1
 - setuptools updated to latest version 1.3.1
