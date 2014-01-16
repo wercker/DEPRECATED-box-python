@@ -24,9 +24,14 @@ script : |
   sudo python3 ez_setup.py
   sudo python2 ez_setup.py
 
-  wget https://raw2.github.com/pypa/pip/1.4.X/contrib/get-pip.py
-  sudo python get-pip.py
-  sudo python3 get-pip.py
+  cd /tmp/
+  wget pip-1.4.1.tar.gz
+  tar xvfz pip-1.4.1.tar.gz
+  cd pip-1.4.1
+
+  sudo python setup.py install
+  sudo python3 setup.py install
+
   sudo rm -rf /usr/local/bin/pip
   sudo cp /usr/local/bin/pip-2.7 /usr/local/bin/pip
 
@@ -34,6 +39,8 @@ script : |
   sudo pip-2.7 install virtualenv wheel
 
   sudo chef-solo -c $WERCKER_SOURCE_DIR/solo.rb -j $WERCKER_SOURCE_DIR/solo.json -l debug
+
+  pip --version
 
 box-detect:
   priority : 900
