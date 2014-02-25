@@ -91,6 +91,11 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 # Changelog
 
+## 1.0.0
+- version increased to 1.0.0 to reflect stable status
+- newer version of virtualenv installed
+- pip (outside of virtualenv) is now also the latest version
+
 ## 0.0.12
 
 - Changed `ubuntu12.04-webessentials` to version `1.0.0`
