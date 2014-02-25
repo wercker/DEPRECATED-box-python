@@ -91,9 +91,11 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 # Changelog
 
+## 1.0.1
+- newer version of virtualenv installed 1.11.4
+
 ## 1.0.0
 - version increased to 1.0.0 to reflect stable status
-- newer version of virtualenv installed
 - pip (outside of virtualenv) is now also the latest version
 - wheel is now disabled in the default yaml for this box.
 
