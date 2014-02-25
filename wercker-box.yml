@@ -29,22 +29,22 @@ script : |
   cd /tmp/
   wget https://raw.github.com/pypa/pip/master/contrib/get-pip.py
   sudo python get-pip.py
+  pip --version
   sudo cp /usr/local/bin/pip /usr/local/bin/pip-2.7
   sudo rm -rf /usr/local/bin/pip
   sudo python3 get-pip.py
   sudo cp /usr/local/bin/pip /usr/local/bin/pip-3.2
   sudo cp /usr/local/bin/pip-2.7 /usr/local/bin/pip
+  pip --version
 
   sudo pip-3.2 install virtualenv wheel
   sudo pip-2.7 install virtualenv wheel
 
   sudo chef-solo -c $WERCKER_SOURCE_DIR/solo.rb -j $WERCKER_SOURCE_DIR/solo.json -l debug
 
-  pip --version
   pip-3.2 --version
   pip-2.7 --version
-
-  fail!
+  pip --version
 
 box-detect:
   priority : 900
