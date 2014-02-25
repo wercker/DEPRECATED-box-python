@@ -31,7 +31,7 @@ script : |
   sudo python get-pip.py
   sudo python3 get-pip.py
   sudo rm -rf /usr/local/bin/pip
-  sudo cp /usr/local/bin/pip-2.7 /usr/local/bin/pip
+  # sudo cp /usr/local/bin/pip-2.7 /usr/local/bin/pip
 
   sudo pip-3.2 install virtualenv wheel
   sudo pip-2.7 install virtualenv wheel
@@ -66,12 +66,13 @@ default-build:
           # A step that sets up the python virtual environment
           - virtualenv:
               name: setup virtual environment
+              install_wheel: false # Enable wheel to speed up builds (experimental)
 
           # # Use this virtualenv step for python 3.2
           # - virtualenv
           #     name: setup virtual environment
           #     python_location: /usr/bin/python3.2
-
+ß
           # A step that executes `pip install` command.
           - pip-install
 
