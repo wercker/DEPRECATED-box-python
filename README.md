@@ -95,6 +95,7 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 - version increased to 1.0.0 to reflect stable status
 - newer version of virtualenv installed
 - pip (outside of virtualenv) is now also the latest version
+- wheel is now disabled in the default yaml for this box.
 
 ## 0.0.12
 

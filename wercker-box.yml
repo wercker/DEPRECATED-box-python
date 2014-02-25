@@ -72,7 +72,7 @@ default-build:
           # - virtualenv
           #     name: setup virtual environment
           #     python_location: /usr/bin/python3.2
-ß
+
           # A step that executes `pip install` command.
           - pip-install
 
