@@ -1,17 +1,19 @@
 name: python
-version: 1.0.1
+version: 0.0.1
 inherits: wercker/ubuntu12.04-webessentials@1.0.0
-type : main
-platform : ubuntu@12.04
-description : python
+type: main
+platform: ubuntu@12.04
+description: python
 keywords:
   - python
-  - virtualenv
   - python 2.7
   - python 3.2
   - python 3.3
+  - python 3.4
+  - pip
   - wheel
-packages :
+  - virtualenv
+packages:
   - python@2.7.3
   - python@3.2.3
   - python@3.3.5
@@ -20,7 +22,7 @@ packages :
   - virtualenv@1.11.4
   - wheel@0.22.0
   - psycopg2
-script : |
+script: |
   echo installing python2.7 and python3.2 from apt...
   sudo apt-get update
   sudo apt-get install python python-dev
@@ -76,8 +78,8 @@ script : |
   sudo chef-solo -c $WERCKER_SOURCE_DIR/solo.rb -j $WERCKER_SOURCE_DIR/solo.json -l debug
 
 box-detect:
-  priority : 900
-  version :
+  priority: 900
+  version:
   detect:
     - files:
       - requirements.txt
@@ -86,7 +88,7 @@ box-detect:
 
 default-build:
   python:
-    priority : 50
+    priority: 50
     detect:
       - default: true
     text-to-append: |
