@@ -1,8 +1,7 @@
 # Python box
 
-A [wercker box](http://devcenter.wercker.com/articles/boxes/) with python 2.7
-and 3.2 installed. For both versions of python setuptools, wheel, pip and
-virtualenv are installed.
+A [wercker box](http://devcenter.wercker.com/articles/boxes/) with python 2.7, 3.2, 3.3 and 3.4rc3 installed.
+For all versions of python setuptools, wheel, pip and virtualenv are installed.
 
 There are two steps by default added to the wercker.yml:
 
@@ -39,6 +38,7 @@ build:
   steps:
     - virtualenv:
         name: setup virtual environment
+        install_wheel: true # Enable wheel to speed up builds (experimental)
 
     - pip-install:
         requirements_file: "requirements.txt" # Optional argument.
@@ -62,75 +62,5 @@ see our [devcenter](http://devcenter.wercker.com). We also have guides:
 * [Getting started with Django and Postgres](http://devcenter.wercker.com/articles/languages/python/django-postgres.html)
 * And a small blog post on [how to deploy to pypi](http://blog.wercker.com/2013/06/28/Deploying-to-pypi.html).
 
-# What's new
-
-- Changed `ubuntu12.04-webessentials` to version `1.0.0`
-
-# License
-
-The MIT License (MIT)
-
-Copyright (c) 2013 wercker
-
-Permission is hereby granted, free of charge, to any person obtaining a copy of
-this software and associated documentation files (the "Software"), to deal in
-the Software without restriction, including without limitation the rights to
-use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of
-the Software, and to permit persons to whom the Software is furnished to do so,
-subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
-FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
-COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
-IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
-CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-
 # Changelog
 
-## 1.0.1
-- newer version of virtualenv installed 1.11.4
-
-## 1.0.0
-- version increased to 1.0.0 to reflect stable status
-- pip (outside of virtualenv) is now also the latest version
-- wheel is now disabled in the default yaml for this box.
-
-## 0.0.12
-
-- Changed `ubuntu12.04-webessentials` to version `1.0.0`
-
-## 0.0.11
-
-- force pip for python 2.7 to be deafult
-
-## 0.0.10
-
-- switch for default pip (python 2.7 one or 3.2)
-
-## 0.0.9
-
-- Python 3.2 added by default
-- pip updated to 1.4.1
-- setuptools updated to latest version 1.3.1
-- default wercker.yaml template updated
-
-## 0.0.8
-
-- Update web-essentials to 0.0.12 (pgdg-keyring update)
-
-## 0.0.7
-
-- Update [`web-essentials`](https://app.wercker.com/#applications/51ab0c42df8960ba45003fd9/tab/details) to 0.0.11
-
-## 0.0.5
-
-- Lock apt cookbook to 1.8.2
-- Update readme
-
-## 0.0.4
-
-- Initial release
