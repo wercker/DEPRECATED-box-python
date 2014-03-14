@@ -17,3 +17,21 @@ build:
           python3.2 --version
           which python3.3
           python3.3 --version
+          which python3.4
+          python3.4 --version
+          which pip
+          pip --version
+          which pip-3.2
+          pip-3.2 --version
+          which pip-3.3
+          pip-3.3 --version
+          which pip-3.4
+          pip-3.4 --version
+          which virtualenv
+          virtualenv --version
+          which virtualenv-3.2
+          virtualenv-3.2 --version
+          which virtualenv-3.3
+          virtualenv-3.3 --version
+          which virtualenv-3.4
+          virtualenv-3.4 --version
