@@ -6,6 +6,6 @@
     "recipe[apt]",
     "recipe[wercker-aptkey::default]",
     "recipe[wercker-django::default]",
-    "recipe[mysql::client]",
+    "recipe[mysql::client]"
   ]
 }
