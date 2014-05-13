@@ -64,7 +64,8 @@ see our [devcenter](http://devcenter.wercker.com). We also have guides:
 
 # What's new
 
-- Changed `ubuntu12.04-webessentials` to version `1.0.0`
+- Changed `ubuntu12.04-webessentials` to version `1.0.4`
+- minor upgrades for pip, virtualenv and wheel
 
 # License
 
@@ -91,8 +92,10 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 # Changelog
 
-## 1.0.1
-- newer version of virtualenv installed 1.11.4
+## 1.0.2
+- phantomjs updated to 1.9.7
+- nodejs/npm updated (0.10.28/1.4.9)
+- upgrades for PIP (1.5.5), virtualenv (1.11.5), wheel (0.23.0)
 
 ## 1.0.0
 - version increased to 1.0.0 to reflect stable status
