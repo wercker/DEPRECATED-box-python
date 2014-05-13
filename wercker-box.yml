@@ -48,7 +48,7 @@ script : |
   pip --version
   pip freeze
   phantomjs -v
-  virtualenv -v
+  virtualenv --version
 
 box-detect:
   priority : 900
