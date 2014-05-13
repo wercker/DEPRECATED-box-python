@@ -92,6 +92,9 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 # Changelog
 
+## 1.0.3
+- simplified provisioning, should fix phantomjs version
+
 ## 1.0.2
 - phantomjs updated to 1.9.7
 - nodejs/npm updated (0.10.28/1.4.9)
