@@ -19,6 +19,7 @@ packages :
   - wheel@0.23.0
   - psycopg2
   - phantomjs
+  - mercurial
 script : |
   sudo apt-get update
   sudo apt-get remove python-virtualenv python-setuptools
@@ -93,4 +94,3 @@ default-build:
               code: |
                 echo "python version $(python --version) running"
                 echo "pip version $(pip --version) running"
-
