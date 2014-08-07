@@ -92,9 +92,12 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 # Changelog
 
+## 1.1.0
+- python 2.6, 3.3 and 3.4 added. Through ppa:fkrull/deadsnakes
+
 ## 1.0.4
 - mercurial added
-- upgraded PIP (1.5.6) and virtualenv (1.11.6) 
+- upgraded PIP (1.5.6) and virtualenv (1.11.6)
 
 ## 1.0.3
 - simplified provisioning, should fix phantomjs version
