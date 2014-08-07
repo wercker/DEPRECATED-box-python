@@ -1,5 +1,5 @@
 name: python
-version: 1.0.4
+version: 1.0.5-alpha
 inherits: wercker/ubuntu12.04-webessentials@1.0.4
 type : main
 platform : ubuntu@12.04
@@ -48,8 +48,10 @@ script : |
   pip-2.7 --version
   pip --version
   pip freeze
+  pip-3.2 freeze
   phantomjs -v
   virtualenv --version
+  fail_now
 
 box-detect:
   priority : 900
