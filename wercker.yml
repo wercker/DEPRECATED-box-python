@@ -6,3 +6,8 @@ build :
         code : |
           cd $WERCKER_ROOT
           berks install -p cookbooks
+
+    - script:
+        name: try provisioning
+        code: |
+            source ./provision.sh
