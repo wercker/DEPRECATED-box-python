@@ -44,9 +44,9 @@ script : |
 
   sudo chef-solo -c $WERCKER_SOURCE_DIR/solo.rb -j $WERCKER_SOURCE_DIR/solo.json -l debug
 
-  pip-3.2 --version
-  pip-2.7 --version
   pip --version
+  pip-2.7 --version
+  pip-3.2 --version
   pip freeze
   pip-3.2 freeze
   phantomjs -v
