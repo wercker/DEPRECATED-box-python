@@ -1,6 +1,6 @@
 sudo apt-get update
 sudo apt-get remove python-virtualenv python-setuptools
-sudo apt-get install python-dev python3 python3-dev python3-psycopg2 python-psycopg2 mercurial
+sudo apt-get install python-dev python3 python3-dev python3-psycopg2 python-psycopg2 mercurial wget
 wget https://bitbucket.org/pypa/setuptools/raw/bootstrap/ez_setup.py
 sudo python3 ez_setup.py
 sudo python2 ez_setup.py
