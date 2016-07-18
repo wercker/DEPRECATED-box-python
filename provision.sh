@@ -5,7 +5,7 @@ sudo apt-get install mercurial
 
 sudo add-apt-repository -y ppa:fkrull/deadsnakes
 sudo apt-get update
-wget https://bitbucket.org/pypa/setuptools/raw/bootstrap/ez_setup.py -O /tmp/ez_setup.py
+wget  https://bootstrap.pypa.io/ez_setup.py -O /tmp/ez_setup.py
 
 for i in 2.6 3.2 3.3 3.4 2.7
 do
